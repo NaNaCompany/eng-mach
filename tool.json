@@ -1,0 +1,43 @@
+{
+  "id": "E002",
+  "title": "마하수 계산기",
+  "inputs_text": "유속 V [m/s], 해당 유체 상태의 음속 a [m/s]",
+  "formula": "M = V / a",
+  "output_text": "마하수 M [무차원]",
+  "assumptions": "a>0, V≥0. 음속은 같은 온도·조성·상태의 값을 입력한다. 공기 음속 상수 340 m/s를 모든 조건에 강제하지 않는다.",
+  "purpose": "마하수 계산 / 풍동·노즐 실험 속도비 확인",
+  "sources": [
+    {
+      "label": "NASA Glenn · Role of Mach Number",
+      "url": "https://www.grc.nasa.gov/www/BGH/machrole.html"
+    }
+  ],
+  "slug": "eng-mach",
+  "category": "유체",
+  "result_label": "마하수 M",
+  "result_dimension": "ratio",
+  "fields": [
+    {
+      "key": "v",
+      "label": "유속 V",
+      "dimension": "speed",
+      "example": 170,
+      "constraint": "nonnegative",
+      "display_unit": "ms",
+      "display_value": "170"
+    },
+    {
+      "key": "a",
+      "label": "해당 상태의 음속 a",
+      "dimension": "speed",
+      "example": 340,
+      "constraint": "positive",
+      "display_unit": "ms",
+      "display_value": "340"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-mach/",
+  "repository": "https://github.com/NaNaCompany/eng-mach",
+  "condition": "",
+  "output_unit": "1"
+}
